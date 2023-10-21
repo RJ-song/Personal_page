@@ -13,8 +13,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
-const pages = ['作品介紹', '學習筆記'];
+const pages = ['Collections', 'Notes'];
 
 function NavBar() {
   const navigate = useNavigate();
@@ -27,15 +26,16 @@ function NavBar() {
 
 
   const handleNav = (page) => {
-    if (page === '作品介紹') {
+    if (page === 'Collections') {
       navigate('/Portfolio')
-    } else if (page === '學習筆記') {
+    } else if (page === 'Notes') {
       navigate('/Notes')
     }
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#514AA9' }}>
+    
+      <AppBar position="static" sx={{backgroundColor: '#991AEE'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <IconButton sx={{ p: 0 }} className='pe-2'>
@@ -103,7 +103,7 @@ function NavBar() {
               <Button
                 key={page}
                 onClick={() => handleNav(page)}
-                sx={{ my: 2, color: location.pathname === `/${page === '作品介紹' ? 'Portfolio' : 'Notes'}` ? 'yellow' : 'white', display: 'block' }}
+                sx={{ my: 2, color: location.pathname === `/${page === 'Collections' ? 'Portfolio' : 'Notes'}` ? 'yellow' : 'white', display: 'block' }}
               >
                 {page}
               </Button>
@@ -129,6 +129,7 @@ function NavBar() {
         </Toolbar>
       </Container>
     </AppBar>
+    
   );
 }
 
