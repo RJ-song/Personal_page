@@ -19,7 +19,7 @@ import { Button } from '@mui/material';
       
         <MDBCard  style={{ width: '400px', height: '450px', display: 'flex', flexDirection: 'column' }}>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-        <MDBCardImage src= {image} fluid alt='loading'
+        <MDBCardImage src= {image} fluid alt='loading...'
         style={{ 
             position: "relative",
             maxWidth: '295pt',  

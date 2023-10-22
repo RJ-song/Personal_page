@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import NavBar from "../components/navBar";
 import WebCard from "../components/WebCard";
 import Footer from '../components/footer';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from "../custom/theme";
 
 function Portfolio (){
     const [showBar,setShowBar] = useState(false)
@@ -9,7 +11,7 @@ function Portfolio (){
     
 
     return (
-        <>
+        <ThemeProvider theme={theme}>
         
          <NavBar/>
          <header>
@@ -33,7 +35,7 @@ function Portfolio (){
             </div>
         </header>
         <div className="container pt-5 pb-3">
-            <h1 className='pb-2' style={{ borderBottom: '2px solid #000' }}>網頁
+            <h1 className='pb-2' style={{ borderBottom: `3px solid ${theme.palette.primary.dark}`, paddingBottom: '12px' }}>網頁
             <img src="https://cdn-icons-png.flaticon.com/128/2278/2278997.png" alt="icon" 
             style={{
                 width:'40px',
@@ -93,7 +95,7 @@ function Portfolio (){
                 ></WebCard>
                 
                 </div>
-                <h1 className='pt-3' style={{ borderBottom: '2px solid #000' }}>其他</h1>
+                <h1 className='pt-3' style={{ borderBottom: `3px solid ${theme.palette.primary.dark}`, paddingBottom: '12px' }}>其他</h1>
                 
                 <WebCard
                     image={'/img/todo.jpg'}
@@ -107,7 +109,7 @@ function Portfolio (){
         </div>
         <Footer/>
         
-        </>
+        </ThemeProvider>
     )
 }
 export default Portfolio;

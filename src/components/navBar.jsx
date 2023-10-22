@@ -13,6 +13,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../custom/theme'
 const pages = ['Collections', 'Notes'];
 
 function NavBar() {
@@ -34,8 +36,8 @@ function NavBar() {
   };
 
   return (
-    
-      <AppBar position="static" sx={{backgroundColor: '#991AEE'}}>
+      <ThemeProvider theme = {theme}>
+      <AppBar position="static" sx={{backgroundColor: theme.palette.primary.main}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <IconButton sx={{ p: 0 }} className='pe-2'>
@@ -103,7 +105,11 @@ function NavBar() {
               <Button
                 key={page}
                 onClick={() => handleNav(page)}
-                sx={{ my: 2, color: location.pathname === `/${page === 'Collections' ? 'Portfolio' : 'Notes'}` ? 'yellow' : 'white', display: 'block' }}
+                sx={{ my: 2, 
+                      color: location.pathname === `/${page === 'Collections' ? 'Portfolio' : 'Notes'}` ? 'yellow' : 'white', 
+                      display: 'block',
+                      borderBottom: location.pathname === '/collections' && page === 'Collections' ? '1px solid black' : 'none',
+                    }}
               >
                 {page}
               </Button>
@@ -129,6 +135,7 @@ function NavBar() {
         </Toolbar>
       </Container>
     </AppBar>
+    </ThemeProvider>
     
   );
 }

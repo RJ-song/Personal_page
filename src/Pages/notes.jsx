@@ -29,7 +29,7 @@ function Notes (){
                     </div>
                  </header>
                 <div className='container'>
-                Notes
+                        <h1 className='text-center'>Notes</h1>
                 </div>
                 <Footer/>
             </MuiThemeProvider>

@@ -18,7 +18,7 @@ export default function Footer(){
         }}
       >
       <div className="container pt-3">
-      <h2 className="text-white" style={{ borderBottom: '2px solid #fff' }}>Contact Me 
+      <h2 className="text-white" style={{}}>Contact Me 
       <img src="https://cdn-icons-png.flaticon.com/128/4151/4151471.png" alt="icon" 
             style={{
                 width:'35px',
@@ -28,7 +28,7 @@ export default function Footer(){
              }}
             ></img>
       </h2>
-      <h5 className="text-white">
+      <h5 className="text-white pt-2">
       <img src="https://cdn-icons-png.flaticon.com/128/542/542689.png" alt="icon" 
             style={{
                 width:'20px',
