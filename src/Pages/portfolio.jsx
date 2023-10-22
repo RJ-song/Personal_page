@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/navBar";
 import WebCard from "../components/WebCard";
+import Footer from '../components/footer';
 
 function Portfolio (){
     const [showBar,setShowBar] = useState(false)
@@ -31,7 +32,7 @@ function Portfolio (){
                 </div>
             </div>
         </header>
-        <div className="container pt-5">
+        <div className="container pt-5 pb-3">
             <h1 className='pb-2' style={{ borderBottom: '2px solid #000' }}>網頁
             <img src="https://cdn-icons-png.flaticon.com/128/2278/2278997.png" alt="icon" 
             style={{
@@ -92,7 +93,7 @@ function Portfolio (){
                 ></WebCard>
                 
                 </div>
-                <h1 className='pt-3' style={{ borderBottom: '2px solid #000' }}>其他類別</h1>
+                <h1 className='pt-3' style={{ borderBottom: '2px solid #000' }}>其他</h1>
                 
                 <WebCard
                     image={'/img/todo.jpg'}
@@ -104,6 +105,7 @@ function Portfolio (){
                 
             
         </div>
+        <Footer/>
         
         </>
     )

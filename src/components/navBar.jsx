@@ -110,7 +110,7 @@ function NavBar() {
             ))}
           </Box>
 
-          <Box sx={{  flexGrow: 0, display: 'flex', gap: '10px' }}>
+          {/* <Box sx={{  flexGrow: 0, display: 'flex', gap: '10px' }}>
           <Tooltip title="GitHub">
               <IconButton sx={{ p: 0 }}>
                 <a href="https://github.com/RJ-song" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
@@ -125,7 +125,7 @@ function NavBar() {
                 </a>
               </IconButton>
             </Tooltip>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

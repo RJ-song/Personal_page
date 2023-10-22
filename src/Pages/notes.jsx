@@ -1,6 +1,7 @@
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import NavBar from "../components/navBar";
 import theme from "../custom/theme";
+import Footer from '../components/footer';
 
 function Notes (){
 
@@ -30,7 +31,7 @@ function Notes (){
                 <div className='container'>
                 Notes
                 </div>
-                
+                <Footer/>
             </MuiThemeProvider>
     )
 }
