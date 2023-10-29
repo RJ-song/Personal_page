@@ -7,7 +7,9 @@ import theme from "../custom/theme";
 import planets from "../../public/img/planets.jpg"
 import tetris from "../../public/img/tetris.jpg"
 import todo from "../../public/img/todo.jpg"
-
+import todoprac from "../../public/img/todoprac.jpg"
+import mediapipe from "../../public/img/todoprac.jpg"
+import tensor from "../../public/img/tensor.png"
 function Portfolio (){
 
     return (
@@ -74,14 +76,14 @@ function Portfolio (){
                 </div>
                 <div className=' pt-3 pb-3' style={{ display: 'flex', justifyContent: 'space-between' ,  flexWrap: 'wrap'}}>
                 <WebCard
-                    image={'/img/tensor.png'}
+                    image={tensor}
                     title="Posenet ReactJS"
                     description="測試用網頁，使用posenet model，在網頁上以鏡頭偵測人體節點並繪製在畫面上。"
                     pageUrl ='https://rj-song.github.io/Tetris/'
                     repoUrl='https://github.com/RJ-song/Posenet_Reactjs/tree/master'
                 ></WebCard>
                 <WebCard
-                    image={'/img/todoprac.jpg'}
+                    image={todoprac}
                     title="Todolist Practice"
                     description="練習作品，用React製作的一個簡易代辦事項工具。"
                     pageUrl ='https://rj-song.github.io/React-Todolist/'
@@ -101,7 +103,7 @@ function Portfolio (){
                 </h1>
                 
                 <WebCard
-                    image={'/img/mediapipe.png'}
+                    image={mediapipe}
                     title="Mediapipe Sport Detection"
                     description="使用Python撰寫，以MediaPipe套件偵測人體姿勢，並運用機器學習技術訓練出能判斷運動姿勢的模型，能夠判斷人體運動姿勢準確度並計算次數。"
                     pageUrl ='https://drive.google.com/drive/folders/1SB1Llw5yeIUd-dXywejXufeP46ngIsT4?usp=sharing'
