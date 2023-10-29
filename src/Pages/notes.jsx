@@ -29,9 +29,9 @@ function Notes (){
                     </div>
                  </header>
                 <div className='container'>
-                        <h1 className='text-center'>Notes</h1>
+                        <h1 className='text-center'>Under Development...</h1>
                 </div>
-                <Footer/>
+                {/* <Footer/> */}
             </MuiThemeProvider>
     )
 }

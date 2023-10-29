@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import Link from "@mui/material/Link";
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
@@ -37,7 +38,13 @@ export default function Footer(){
                 marginRight:'5px'
              }}
             ></img>
-      : a0970220839@gmail.com</h5>
+        <Link
+                  href="mailto:a0970220839@gmail.com"
+                  sx={{ color: "white", fontSize: 20 }}
+                >
+                  a0970220839@gmail.com
+        </Link>
+      </h5>
       
       <h5 className="text-white">
       <img src="https://cdn-icons-png.flaticon.com/128/597/597177.png" alt="icon" 

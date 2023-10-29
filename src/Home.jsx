@@ -1,19 +1,26 @@
 import { useState,useEffect} from 'react'
+import { Navigate, useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './components/cards';
 import NavBar from './components/navBar';
-import HomePageCard from './components/WebCard';
+import WebCard from './components/WebCard';
 import { ThemeProvider } from '@mui/material/styles';
 import Avatar from "@mui/material/Avatar";
 import theme from './custom/theme'
 import Footer from './components/footer';
+import avatar from "../public/img/avatar.png"
+import planets from "../public/img/planets.jpg"
+import tetris from "../public/img/tetris.jpg"
+import todo from "../public/img/todo.jpg"
+import { Button } from '@mui/material';
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate()
   useEffect(() => {
     const delaytimer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500); 
+    }, 1000); 
 
     return () => clearTimeout(delaytimer); 
   }, []);
@@ -59,10 +66,10 @@ function Home() {
             ></img>
       </h2>
       <div className='container pt-3' style={{display:'flex',alignItems:'center', gap:'100px'}}>
-          <h5 className='text-center'>Hi! 我是來自彰化的RJ，目前是就讀國立雲林科技大學資管系四年級的準畢業生，具有責任心、個性好相處，擅長與他人溝通交流，
+          <h5 className='text-center'>H! 我是來自彰化的RJ，目前就讀國立雲林科技大學資訊管理系四年級，即將畢業成為社會新鮮人，具責任心、個性好相處，擅長與其他人溝通交流，
           對網頁設計有興趣，喜歡學習新技術和接觸新事物，歡迎多多指教!</h5>
           <Avatar
-                src={"/img/avatar.png"}
+                src={avatar}
                 sx={{ width: "20%", height: "20%" }}
           ></Avatar>
           
@@ -197,6 +204,51 @@ function Home() {
         <h5>日文學習中...</h5>
         </li>
       </div>
+      <div className='container pt-5'>
+      <h2 className="" style={{ borderBottom: `3px solid ${theme.palette.primary.dark}`, paddingBottom: '15px' }}>Projects  
+      <img src="https://cdn-icons-png.flaticon.com/128/7792/7792148.png" alt="icon" 
+            style={{
+                width:'38px',
+                height:'38px',
+                verticalAlign:'middle',
+                marginLeft:'10px'
+             }}
+            ></img>
+        <Button style={{float:'right'}} onClick={
+          () => navigate('/Portfolio')
+        }>see more</Button>
+      </h2>
+      </div>
+      
+      <div className=' pt-3 pb-3' style={{ display: 'flex', justifyContent: 'space-between' ,  flexWrap: 'wrap'}}>
+
+                <WebCard
+                    image={planets}
+                    title="Planetary Tourism"
+                    description="這是參加2023 NASA Hackthon Space App Challenge的團隊餐賽作品，是運用NASA的資料、介紹各行星特殊景觀的導覽網頁，使用React框架製作。"
+                    pageUrl ='https://rj-song.github.io/Planetary_Tourism/'
+                    repoUrl='https://github.com/RJ-song/Planetary_Tourism'
+                ></WebCard>
+                
+                <WebCard
+                    image={tetris}
+                    title="Tetris"
+                    description="這是一個練習專案，沒有運用任何框架，單純使用HTML搭配CSS、JS寫出來的簡易俄羅斯方塊遊戲。"
+                    pageUrl ='https://rj-song.github.io/Tetris/'
+                    repoUrl='https://github.com/RJ-song/Tetris'
+                ></WebCard>
+
+                <WebCard
+                    image={todo}
+                    title="React TodoList"
+                    description="這個網頁是一個紀錄待辦事項的工具，是參加六角學院React直播班的練習專案，其中用到Axios套件與伺服器溝通，由於伺服器目前已關閉，登入註冊等功能目前無法使用。"
+                    pageUrl ='https://rj-song.github.io/React_TodoList/'
+                    repoUrl='https://github.com/RJ-song/React_TodoList'
+                ></WebCard>
+                </div>
+               
+                
+                
       </div>
       <Footer/>
       </ThemeProvider>
